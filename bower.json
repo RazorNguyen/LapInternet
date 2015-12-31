@@ -1,0 +1,16 @@
+{
+  "name": "LapInternet",
+  "authors": [
+    "Razor Nguyen <razor.nguyen@nexcel.vn>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "Index.html",
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

@@ -1,0 +1,59 @@
+﻿@model Site.Model.RegisterViewModel
+<div class="row">
+    <div class="col-md-7">
+        @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+        {
+            <div class="text-danger">
+                @Html.ValidationSummary()
+            </div>
+            <div class="form-group">
+                <label for="Name">Họ Tên <span class="text-danger">(*)</span></label>
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="Họ Tên">
+            </div>
+            <div class="form-group">
+                <label for="Id">Số Chứng Minh <span class="text-danger">(*)</span></label>
+                <input type="text" class="form-control" name="Id" id="Id" placeholder="Số chứng minh">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại <span class="text-danger">(*)</span></label>
+                <input type="text" class="form-control" name="Phone" id="phone" placeholder="Số điện thoại">
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ lắp đặt</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="Địa chỉ lắp đặt">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="type">Chọn Dịch vụ</label>
+                <select class="form-control" id="type" name="Type">
+                    <option>ADSL</option>
+                    <option>Internet Cáp Quang</option>
+                    <option>Truyền Hình</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="modem">Chọn Modem</label><br />
+                <label class="radio-inline"><input type="radio" name="ModemType">Wifi 1 Port</label>
+                <label class="radio-inline"><input type="radio" name="ModemType">Wifi 4 Port</label>
+                <label class="radio-inline"><input type="radio" name="ModemType">Modem 4 Port</label>
+                <label class="radio-inline"><input type="radio" name="ModemType" checked>Không lấy</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng kí</button>
+
+        }
+    </div>
+    <div class="col-md-5">
+        <p>Gọi Ngay Để Được Tư Vấn Và Nhận Khuyến Mãi</p>
+        <p>
+            <span class="glyphicon glyphicon-phone-alt"></span><b> @ViewBag.Phone</b>
+        </p>
+        <p>
+            <span class="glyphicon glyphicon-envelope"></span><b> @ViewBag.Email</b>
+        </p>
+        <p>Cam kết triển khai đúng tiến độ!!</p>
+        <p>Triển khai trong vòng <span class="text-bold text-danger">48</span>  tiếng</p>
+    </div>
+</div>
